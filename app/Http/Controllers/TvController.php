@@ -3,11 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Tv;
 use App\Models\Type;
 
 class TvController extends Controller
 {
+    public function index()
+    {
+        $datas = DB::select('select * from tv');
+
+        dd($datas);
+    }
+
     public function NewTv()
     {
         return view("new_tv");
@@ -57,3 +65,4 @@ class TvController extends Controller
         ]); 
     }
 }
+
