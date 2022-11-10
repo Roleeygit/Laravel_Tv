@@ -37,7 +37,7 @@ class TvController extends Controller
         $tv->type_id= $type_id;
         $tv->save();
 
-        $request->session()->flash("succes","The writing was successful");
+        $request->session()->flash("success","The writing was successful");
         return redirect("/new-tv");
     }
 

@@ -1,7 +1,7 @@
 <a href="/tvdata"><button>Adatok</button></a>
 <a href="/tvfive"><button>Adatok5</button></a>
 
-@if(session()->has("sucess"))
+@if(session()->has("success"))
     <h3>{{ session("success") }}</h3>
 @endif
 
